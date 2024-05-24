@@ -12,14 +12,12 @@ function numberGrouping(numbers) {
   const bagi3 = [];
 
   numbers.forEach((num) => {
-    if (num % 2 === 0) {
-      genap.push(num);
-    } else {
-      ganjil.push(num);
-    }
-
     if (num % 3 === 0) {
       bagi3.push(num);
+    } else if (num % 2 !== 0) {
+      ganjil.push(num);
+    } else if (num % 2 === 0) {
+      genap.push(num);
     }
   });
 
